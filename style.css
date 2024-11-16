@@ -1,0 +1,129 @@
+/* google fonts */
+.philosopher-regular {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.philosopher-bold {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.philosopher-regular-italic {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.philosopher-bold-italic {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900 */
+/* 
+.jost-<uniquifier> {
+    font-family: "Jost", serif;
+    font-weight: <weight>;
+    font-style: normal;
+}
+*/
+
+.jost-regular {
+    font-family: "Jost", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/************* general *************/
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    /* REQUIREMENT 11/4/24: background */
+    background-color: #181616;
+    color: #F0EEED;
+    font-family: "Jost", serif;
+    margin: 0;
+}
+p{
+    font-size: 1.1rem;
+}
+a{
+    color:#EC6F6F;
+    text-underline-offset: 5px;
+    transition: all 0.5s ease;
+}
+a:hover{
+    color: #D9AAA9;
+}
+
+/************* navigation *************/
+nav{
+    /* REQUIREMENT 11/12/24: border */
+    border-bottom: 1px solid #403E3F;
+    text-align: center;
+}
+nav ul{
+    margin: 0;
+    padding-left: 0;
+}
+nav li{
+    list-style: none;
+}
+nav a{
+    border-top: 1px solid #403E3F;
+    color: #A09494;
+    display: block;
+    letter-spacing: 2px;
+    margin: auto;
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 50%;
+}
+nav a:hover{
+    /* REQUIREMENT 11/12/24: dynamic navigation styling */
+    background-color: #262425;
+    color: #F0EEED;
+}
+#name{
+    border-top: 0px;
+    color: #ef4646;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+#name:hover{
+    /* REQUIREMENT 11/12/24: dynamic navigation styling */
+    background-color: #181616;
+    color: #D9AAA9;
+}
+/************* footer *************/
+footer{
+    border-top: 1px solid #403E3F;
+    color: #A09494;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 3rem 0;
+    text-align: center;
+}
+footer i{
+    color: #A09494;
+    transition: all 0.3s ease;
+}
+footer i:hover{
+    color: #EC6F6F;
+    transform:scale(1.15);
+}
+footer div{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+footer p{
+    font-size: 0.9rem;
+    margin: 0.5rem;
+}
