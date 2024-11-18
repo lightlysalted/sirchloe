@@ -1,21 +1,21 @@
 /* google fonts */
 .philosopher-regular {
-    font-family: "Philosopher", sans-serif;
+    font-family: "Philosopher", serif;
     font-weight: 400;
     font-style: normal;
 }
 .philosopher-bold {
-    font-family: "Philosopher", sans-serif;
+    font-family: "Philosopher", serif;
     font-weight: 700;
     font-style: normal;
 }
 .philosopher-regular-italic {
-    font-family: "Philosopher", sans-serif;
+    font-family: "Philosopher", serif;
     font-weight: 400;
     font-style: italic;
 }
 .philosopher-bold-italic {
-    font-family: "Philosopher", sans-serif;
+    font-family: "Philosopher", serif;
     font-weight: 700;
     font-style: italic;
 }
@@ -31,25 +31,22 @@
 */
 
 .jost-regular {
-    font-family: "Jost", serif;
+    font-family: "Jost", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 /************* general *************/
-*{
-    box-sizing: border-box;
-    padding: 0;
-}
 body{
     /* REQUIREMENT 11/4/24: background */
     background-color: #181616;
     color: #F0EEED;
-    font-family: "Jost", serif;
-    margin: 0;
+    font-family: "Jost", sans-serif;
 }
-p{
+p, blockquote{
     font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 2.2rem;
 }
 a{
     color:#EC6F6F;
@@ -59,16 +56,66 @@ a{
 a:hover{
     color: #D9AAA9;
 }
+blockquote{
+    border-left: 3px #403E3F solid;
+    font-style: italic;
+    margin: 1rem;
+    padding: 0 1rem;
+}
+blockquote span{
+    display: block;
+    font-weight: 600;
+    margin-top: 0.8rem;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "Philosopher", serif;
+    text-transform: uppercase;
+}
+/***** buttons *****/
+button{
+    cursor: pointer;
+}
+.pri-btn{
+    background-color: #ef4646;
+    border: none;
+    color: #181616;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    width: fit-content;
+}
+.pri-btn:hover{
+    background-color: #EC6F6F;
+    color: #262425;
+    transform: scale(1.05);
+}
+.sec-btn{
+    border: 1px solid #EF4646;
+    color: #EF4646;
+    font-weight: 600;
+    letter-spacing: 4px;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    width: fit-content;
+}
+.sec-btn:hover{
+    border: 1px solid #EC6F6F;
+    color: #EC6F6F;
+    transform: scale(1.03);
+}
 
 /************* navigation *************/
 nav{
     /* REQUIREMENT 11/12/24: border */
     border-bottom: 1px solid #403E3F;
+    font-size: 1.1rem;
     text-align: center;
-}
-nav ul{
-    margin: 0;
-    padding-left: 0;
 }
 nav li{
     list-style: none;
@@ -92,7 +139,7 @@ nav a:hover{
 #name{
     border-top: 0px;
     color: #ef4646;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
 }
 #name:hover{
@@ -106,7 +153,7 @@ footer{
     color: #A09494;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.7rem;
     padding: 3rem 0;
     text-align: center;
 }
@@ -125,5 +172,228 @@ footer div{
 }
 footer p{
     font-size: 0.9rem;
+    line-height: 1.5;
     margin: 0.5rem;
+}
+
+/************* home *************/
+/***** hero *****/
+.hero{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    padding-bottom: 5rem;
+}
+.hero div{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+/* REQUIREMENT 11/17/24: psuedo-element */
+.hero div h2::after{
+    color: #B42625;
+    content: " ✶";
+    font-style: normal;
+}
+.hero div h1{
+    font-size: 3rem;
+    letter-spacing: 3px;
+    line-height: 1.3;
+}
+/***** tour/music *****/
+.tour-music{
+    display: flex;
+    flex-direction: column;
+}
+.tour-music img{
+    max-height: 15rem;
+    object-fit: cover;
+    object-position: 0 10%;
+}
+.tour-music section{
+    border-bottom: 1px solid #403E3F;
+    display: flex;
+    padding: 2.5rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+.tour-music section p{
+    color: #A09494;
+}
+.tour-music h2{
+    font: 700 1.8rem "Philosopher", serif;
+    letter-spacing: 2px;
+}
+.tour-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+.title{
+    align-items: center;
+    display: flex;
+    gap: 0.8rem;
+}
+.title i{
+    color: #B42625;
+}
+/* music section */
+.tour-music .sect-music{
+    gap: 1.8rem;
+}
+.sect-music img{
+    width: 50px;
+}
+.song{
+    list-style: none;
+}
+.song + .song {
+    margin-top: 1rem;
+}
+.song a{
+    align-items: center;
+    background-color: #262425;
+    color: #A09494;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    padding-right: 1rem;
+    text-decoration: none;
+}
+.song a div{
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+.song a:hover{
+    background-color: #403E3F;
+    transform: scale(1.02);
+}
+/***** merch *****/
+.sect-merch{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 3rem 4rem;
+    text-align: center;
+}
+.merch-heading{
+    color: #F0EEED;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 1px;
+}
+.merch-heading:hover{
+    color: #A09494;
+}
+.sect-merch a h2{
+    font-weight: 400;
+}
+.sect-merch div{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    text-transform: uppercase;
+}
+.item{
+    display: flex;
+    color: #A09494;
+    flex-direction: column;
+    gap: 1.5rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.item:hover{
+    color: #F0EEED;
+    transform: scale(1.04);
+}
+/***** about *****/
+.about{
+    display: flex;
+    padding: 0.5rem 1.5rem 2.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+article img{
+    border-bottom: 1px solid #403E3F;
+    border-top: 1px solid #403E3F;
+}
+article figcaption{
+    color: #A09494;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+.about-heading h2{
+    color: #B42625;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+.about-heading h3{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.article-content{
+    color: #A09494;
+}
+/***** cta *****/
+aside{
+    border-top: 1px solid #403E3F;
+    padding: 4rem 2rem 5rem;
+}
+aside img{
+    display: none;
+}
+.sub{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+}
+.sub div p{
+    color: #A09494;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+.sub div h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+.sub-form{
+    border: 1px solid #ef4646;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    width: 100%;
+}
+.sub-form input{
+    background-color: transparent;
+    border: none;
+    color: #F0EEED; 
+    letter-spacing: 1px;
+    outline: transparent;
+    padding: 0.8rem 1rem;
+    text-transform: uppercase;
+    text-align: left;
+    width: 100%;
+}
+.sub-form input::placeholder{
+    color: #A09494;
+}
+.sub-form button{
+    font-size: 1.1rem;
+}
+.sub-form button:hover{
+    transform: none;
 }
