@@ -37,12 +37,15 @@
 }
 
 /************* general *************/
+html, body{
+    overflow-x: hidden;
+}
 body{
     /* REQUIREMENT 11/4/24: background */
     background-color: #181616;
     color: #F0EEED;
     font-family: "Jost", sans-serif;
-    overflow-x: hidden;
+    position: relative;
 }
 p, blockquote{
     font-size: 1.1rem;
