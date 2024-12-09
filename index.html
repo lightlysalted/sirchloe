@@ -6,7 +6,7 @@
     <!-- REQUIREMENT 11/4/24: viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- REQUIREMENT 11/4/24: description -->
-    <meta name="description" content="Unofficial website for the band Sir Chloe">
+    <meta name="description" content="Unofficial website for the band Sir Chloe.">
     <!-- REQUIREMENT 11/4/24: keywords -->
     <meta name="keywords" content="Sir Chloe, indie, music, band, rock music, indie rock">
     <!-- REQUIREMENT 11/4/24: author -->
@@ -23,7 +23,7 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" id="name">𝖘𝖎𝖗 𝖈𝖍𝖑𝖔𝖊</a>
+            <a href="index.html" id="band">𝖘𝖎𝖗 𝖈𝖍𝖑𝖔𝖊</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="music.html">Music</a></li>
@@ -33,9 +33,9 @@
         </nav>
     </header>
     <main>
-        <div style="background-color: #262425; padding: 1rem; text-align: center;">
+        <!-- <div style="background-color: #262425; padding: 1rem; text-align: center;">
             <p>Work in progress: site is designed mobile-first</p>
-        </div>
+        </div> -->
         <div class="hero">
             <!-- REQUIREMENT 11/17/24: image 1 of 5 -->
             <img src="images/album.png" alt="'I Am the Dog' album cover by the band Sir Chloe, depicting a woman hugging a sheep.">
@@ -44,70 +44,80 @@
                 <h2 class="philosopher-regular-italic">I Am the Dog</h2>
                 <!-- REQUIREMENT 11/17/24: h1 text level 2 of 5 -->
                 <h1>Out Now</h1>
+                <a href="https://sirchloe.lnk.to/IAmTheDog" target="_blank" class="pri-btn">Listen</a>
             </div>
-            <a href="https://sirchloe.lnk.to/IAmTheDog" target="_blank" class="pri-btn">Listen</a>
+            <img src="images/sheep.png" alt="" id="sheep">
+            <!-- <div id="absolute">
+                <img src="images/sheep.png" alt="" id="sheep">
+            </div> -->
         </div>
         <div class="tour-music">
             <!-- REQUIREMENT 11/17/24: image 2 of 5 -->
-            <img src="images/sirchloe.png" alt="Black and red retro halftone image of Dana Foote singing.">
-            <section>
-                <div class="title">
-                    <h2>Tour</h2><i class="fa-solid fa-earth-americas fa-lg"></i>
-                </div>
-                <div class="tour-content">
-                    <p>See Sir Chloe on <!-- REQUIREMENT 11/17/24: em text level 3 of 5 --><em>The Savory Tour</em> from <strong>March 10</strong> to <!-- REQUIREMENT 11/17/24: strong text level 4 of 5 --><strong>June 2, 2024</strong>.</p>
-                    <p>Locations include New York, Los Angeles, Chicago, and more.</p>
+            <img src="images/sirchloe.png" alt="Black and red retro halftone image of Dana Foote singing." id="red-img">
+            <section class="sect-tour">
+                <div>
+                    <div class="title">
+                        <h2>Tour</h2><i class="fa-solid fa-earth-americas fa-lg"></i>
+                    </div>
+                    <div class="tour-content">
+                        <p>See Sir Chloe on <!-- REQUIREMENT 11/17/24: em text level 3 of 5 --><em>The Savory Tour</em> from <strong>March 10</strong> to <!-- REQUIREMENT 11/17/24: strong text level 4 of 5 --><strong>June 2, 2024</strong>.</p>
+                        <p>Locations include New York, Los Angeles, Chicago, and more.</p>
+                    </div>
                 </div>
                 <a href="tour.html" class="sec-btn">More</a>
+                <img src="images/roses.png" alt="" id="roses">
             </section>
             <section class="sect-music">
-                <div class="title">
-                    <h2>Music</h2><i class="fa-solid fa-music fa-lg"></i>
-                </div>
                 <div>
-                    <ul>
-                        <li class="song">
-                            <a href="https://sirchloe.lnk.to/OverAgain" target="_blank">
-                                <div>
-                                    <!-- REQUIREMENT 11/17/24: image 3 of 5 -->
-                                    <img src="images/singlecover.jpg" alt="Illustration of a woman holding a sheep.">Over Again
-                                </div>
-                                <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                            </a>
-                        </li>
-                        <li class="song">
-                            <a href="https://sirchloe.lnk.to/seventeen" target="_blank">
-                                <div>
-                                    <img src="images/singlecover.jpg" alt="Illustration of a woman holding a sheep.">Seventeen
-                                </div>
-                                <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                            </a>
-                        </li>
-                        <li class="song">
-                            <a href="https://sirchloe.lnk.to/homewhere" target="_blank">
-                                <div>
-                                    <img src="images/singlecover.jpg" alt="Illustration of a woman holding a sheep.">Home Where
-                                </div>
-                                <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="title">
+                        <h2>Music</h2><i class="fa-brands fa-itunes-note fa-lg"></i>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="song">
+                                <a href="https://sirchloe.lnk.to/OverAgain" target="_blank">
+                                    <div>
+                                        <!-- REQUIREMENT 11/17/24: image 3 of 5 -->
+                                        <img src="images/singlecover.jpg" alt="Illustration of a woman holding a sheep.">Over Again
+                                    </div>
+                                    <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+                                </a>
+                            </li>
+                            <li class="song">
+                                <a href="https://sirchloe.lnk.to/seventeen" target="_blank">
+                                    <div>
+                                        <img src="images/singlecover.jpg" alt="Illustration of a woman holding a sheep.">Seventeen
+                                    </div>
+                                    <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+                                </a>
+                            </li>
+                            <li class="song">
+                                <a href="https://sirchloe.lnk.to/homewhere" target="_blank">
+                                    <div>
+                                        <img src="images/singlecover.jpg" alt="Illustration of a woman holding a sheep.">Home Where
+                                    </div>
+                                    <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <a href="music.html" class="sec-btn">More</a>
+                <img src="images/roses2.png" alt="" id="roses2">
             </section>
         </div>
         <section class="sect-merch">
-            <a href="https://store.warnermusic.com/en/warner-music-store/atlantic-records/sir-chloe/" target="_blank" class="merch-heading"><h2>Merch ↗</h2></a>
+            <a href="https://sirchloemusic.com/" target="_blank" class="merch-heading"><h2>Merch ↗</h2></a>
             <div>
-                <a href="https://store.warnermusic.com/en/warner-music-store/atlantic-records/sir-chloe/sheep-shepherd-tracklist-tee/090317967561_CONF.html" target="_blank" class="item">
+                <a href="https://sirchloemusic.com/products/photo-tee" target="_blank" class="item">
                     <!-- REQUIREMENT 11/17/24: image 4 of 5 -->
-                    <img src="images/tshirt.png" alt="Front and back of a black t-shirt with a white illustration, a list of songs, and the words 'Sir Chloe.'">
-                    Sheep Shepherd Tracklist Tee ↗
+                    <img src="images/tshirt.png" alt="A black t-shirt with a black and white photo and the words 'Sir Chloe.'">
+                    Photo Tee ↗
                 </a>
-                <a href="https://store.warnermusic.com/en/warner-music-store/atlantic-records/sir-chloe/i-am-the-dog-sheep-shepherd-hoodie/090317960203_CONF.html" target="_blank" class="item">
+                <a href="https://sirchloemusic.com/products/blur-long-sleeve" target="_blank" class="item">
                     <!-- REQUIREMENT 11/17/24: image 5 of 5 -->
-                    <img src="images/hoodie.png" alt="Front and back of a red hoodie with a black illustration and the words 'I am the dog; Sir Chloe.'">
-                    I Am The Dog Sheep Shepherd Hoodie ↗
+                    <img src="images/longsleeve.png" alt="A black long-sleeve shirt with a blurred white photo and the words 'Sir Chloe.'">
+                    Blur Long Sleeve ↗
                 </a>
                 <a href="https://store.warnermusic.com/en/warner-music-store/atlantic-records/sir-chloe/i-am-the-dog-black-vinyl/075678630149.html" target="_blank" class="item">
                     <img src="images/vinyl.png" alt="A record disc overlaid over the album 'I Am the Dog.'">
@@ -118,10 +128,11 @@
         <article>
             <!-- REQUIREMENT 11/17/24: figure and figcaption -->
             <figure>
-                <img src="images/sirchloe2.png" alt="Dana Foote performing with two other band members in the back.">
+                <img src="images/sirchloe2.png" alt="Dana Foote performing with two other band members in the back." id="fig-img">
                 <figcaption>Dana Foote performing with two other band members in the back.</figcaption>
             </figure>
             <div class="about">
+                <img src="images/roseslong.png" alt="" id="roseslong">
                 <div class="about-heading">
                     <h2>About</h2>
                     <!-- REQUIREMENT 11/17/24: h3 text level 5 of 5 -->
@@ -137,7 +148,7 @@
             </div>
         </article>
         <aside>
-            <img src="images/goat.svg" alt="" class="side-illust1">
+            <img src="images/goat.svg" alt="" id="side-illust1">
             <div class="sub">
                 <div>
                     <h2>Subscribe</h2>
@@ -148,7 +159,7 @@
                         <button type="submit" class="pri-btn">Submit</button>
                 </form>
             </div>
-            <img src="images/goat.svg" alt="" class="side-illust2">
+            <img src="images/goat.svg" alt="" id="side-illust2">
         </aside>
     </main>
     <footer>

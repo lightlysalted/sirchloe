@@ -42,6 +42,7 @@ body{
     background-color: #181616;
     color: #F0EEED;
     font-family: "Jost", sans-serif;
+    overflow-x: hidden;
 }
 p, blockquote{
     font-size: 1.1rem;
@@ -76,7 +77,7 @@ button{
     cursor: pointer;
 }
 .pri-btn{
-    background-color: #ef4646;
+    background-color: #EF4646;
     border: none;
     color: #181616;
     font-size: 1.5rem;
@@ -109,6 +110,14 @@ button{
     color: #EC6F6F;
     transform: scale(1.03);
 }
+.center-main{
+    overflow: hidden;
+    padding: 3rem 0;
+    text-align: center;
+}
+.center-main h1{
+    letter-spacing: 2px;
+}
 
 /************* navigation *************/
 nav{
@@ -136,17 +145,18 @@ nav a:hover{
     background-color: #262425;
     color: #F0EEED;
 }
-#name{
+#band{
     border-top: 0px;
-    color: #ef4646;
+    color: #EF4646;
     font-size: 1.6rem;
     letter-spacing: 1px;
 }
-#name:hover{
+#band:hover{
     /* REQUIREMENT 11/12/24: dynamic navigation styling */
     background-color: #181616;
     color: #D9AAA9;
 }
+
 /************* footer *************/
 footer{
     border-top: 1px solid #403E3F;
@@ -163,7 +173,7 @@ footer i{
 }
 footer i:hover{
     color: #EC6F6F;
-    transform:scale(1.15);
+    transform:scale(1.1);
 }
 footer div{
     display: flex;
@@ -190,7 +200,9 @@ footer p{
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+}
+.hero .pri-btn{
+    margin-top: 2.5rem;
 }
 /* REQUIREMENT 11/17/24: psuedo-element */
 .hero div h2::after{
@@ -203,12 +215,35 @@ footer p{
     letter-spacing: 3px;
     line-height: 1.3;
 }
+.hero div h2{
+    letter-spacing: 1px;
+}
+#sheep{
+    margin-top: 18rem;
+    opacity: 30%;
+    position: absolute;
+/* REQUIREMENT 11/28/24: advanced image styling */
+    transform: scale(1.3);
+    z-index: -5;
+}
+/* #sheep{
+    opacity: 30%;
+    position: sticky;
+    top: 0;
+    transform: scale(1.3);
+    z-index: -1;
+}
+#absolute{
+    height: 100%;
+    position: absolute;
+    top: 75%;
+} */
 /***** tour/music *****/
 .tour-music{
     display: flex;
     flex-direction: column;
 }
-.tour-music img{
+#red-img{
     max-height: 15rem;
     object-fit: cover;
     object-position: 0 10%;
@@ -216,7 +251,9 @@ footer p{
 .tour-music section{
     border-bottom: 1px solid #403E3F;
     display: flex;
+    overflow: hidden;
     padding: 2.5rem 1.5rem;
+    position: relative;
     flex-direction: column;
     gap: 1rem;
 }
@@ -237,15 +274,22 @@ footer p{
     align-items: center;
     display: flex;
     gap: 0.8rem;
+    margin-bottom: 1rem;
 }
 .title i{
     color: #B42625;
 }
+#roses, #roses2, #roseslong{
+    display: none;
+}
 /* music section */
 .tour-music .sect-music{
-    gap: 1.8rem;
+    gap: 2.2rem;
 }
-.sect-music img{
+.sect-music .title{
+    margin-bottom: 1.8rem;
+}
+.song img{
     width: 50px;
 }
 .song{
@@ -322,18 +366,19 @@ footer p{
     flex-direction: column;
     gap: 0.5rem;
 }
-article img{
+#fig-img{
     border-bottom: 1px solid #403E3F;
     border-top: 1px solid #403E3F;
 }
 article figcaption{
     color: #A09494;
+    letter-spacing: 1px;
     margin: auto;
     padding: 1rem;
     text-align: center;
 }
 .about-heading h2{
-    color: #B42625;
+    color: #EF4646;
     font-style: italic;
     letter-spacing: 2px;
 }
@@ -373,13 +418,14 @@ aside img{
     margin-bottom: 0.5rem;
 }
 .sub-form{
-    border: 1px solid #ef4646;
+    border: 1px solid #EF4646;
     display: flex;
     flex-direction: row;
     padding: 0;
     width: 100%;
 }
 .sub-form input{
+    backdrop-filter: blur(5px);
     background-color: transparent;
     border: none;
     color: #F0EEED; 
@@ -393,9 +439,682 @@ aside img{
 .sub-form input::placeholder{
     color: #A09494;
 }
+.sub-form input:focus{
+    background-color: #262425;
+}
 .sub-form button{
     font-size: 1.1rem;
 }
 .sub-form button:hover{
     transform: none;
+}
+
+/************* music *************/
+/***** music *****/
+#dec-div{
+    position: relative;
+}
+.side-img{
+    position: absolute;
+    top: -3rem;
+    width: 32%;
+    z-index: -1;
+}
+#flowerslong2{
+    right: 0;
+    transform: scaleX(-1);
+}
+.all-music{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.all-music div{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.all-music h2{
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0.5rem;
+}
+.all-music a{
+    gap: 0.6rem;
+    max-width: 20rem;
+    width: 100%;
+}
+.all-music a:hover {
+    transform: scale(1.02);
+}
+.all-music a img{
+    border: 1px solid #EF4646;
+    transition: all 0.5s ease;
+}
+.all-music a:hover img{
+    opacity: 0.5;
+}
+#albums-eps a{
+    width: 70%;
+}
+#singles div{
+    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1.5rem;
+}
+#singles div a{
+    max-width: 10rem;
+    width: fit-content;
+}
+/***** platforms *****/
+#platforms{
+    border-bottom: 1px solid #403E3F;
+    padding: 4rem 1.5rem 3.5rem;
+}
+#platforms h2{
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+#platform-icons{
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+}
+#platform-icons a:hover{
+    transform: scale(1.1);
+}
+/***** mvs *****/
+#mvs{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1.5rem 0;
+}
+.vid{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#mvs video{
+    border-radius: 10px;
+    margin-bottom: 0.6rem;
+    max-width: 25rem;
+    width: 100%;
+}
+#mvs h2{
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+#mvs h3{
+    letter-spacing: 2px;
+}
+#mvs p{
+    color: #A09494;
+}
+/***** cta *****/
+#yt-cta{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem 1.5rem 1.5rem;
+}
+#yt-cta h2, #yt-cta h3{
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+#pfp{
+    border-radius: 50%;
+    width: 4rem;
+}
+#profile{
+    border: 1px solid #403E3F;
+    color: #F0EEED;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    max-width: 25rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+}
+#profile:hover{
+    border: 1px solid #EF4646;
+    transform: scale(1.02);
+}
+#profile div{
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+#profile div img{
+    max-width: 15rem;
+    width: 100%;
+}
+
+/************* tour *************/
+#roseslong2, #roseslong2-2{
+    transform: rotate(-20deg);
+    width: 36%;
+}
+#roseslong2{
+    left: -0.3rem;
+}
+#roseslong2-2{
+    right: -0.3rem;
+    transform: scaleX(-1) rotate(-20deg);
+}
+.tour-main{
+    padding-bottom: 0;
+}
+table{
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin: auto;
+    max-width: 30rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    width: 100%;
+}
+tr{
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    height: 6rem;
+    justify-content: space-between;
+}
+.date{
+    border: 1px solid #403E3F;
+    color: #A09494;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    max-width: 5rem;
+    width: 20%;
+}
+.day{
+    color: #F0EEED;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 1.8rem;
+}
+table .sec-btn{
+    font-weight: 500;
+    letter-spacing: 3px;
+    padding: 0.7rem 0.8rem;
+}
+
+/************* contact *************/
+#vine, #vine2{
+    width: 45%;
+}
+#vine2{
+    right: 0;
+    transform: scaleX(-1);
+}
+fieldset{
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    gap: 1rem;
+    margin: auto;
+    padding-bottom: 1rem;
+    width: 90%;
+}
+legend{
+    color: #D9AAA9;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+label{
+    color: #A09494;
+    display: block;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    text-align: left;
+    text-transform: uppercase;
+}
+label span{
+    color: #B42625;
+    padding-left: 2px;
+}
+input, textarea{
+    background-color: #262425;
+    border: 1px solid #403E3F;
+    color: #F0EEED;
+    letter-spacing: 1px;
+    outline: 1px solid transparent;
+    padding: 6px 15px;
+    width: 100%;
+}
+input:focus, textarea:focus {
+    outline: 1px solid #EF4646;
+    transition: opacity .3s ease;
+}
+#contact-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+#contact-form button{
+    font-size: 1.1rem;
+    width: 100%;
+}
+#contact-form button:hover{
+    transform: none;
+}
+#contact-form .sec-btn{
+    background-color: transparent;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+}
+
+/************* tablet *************/
+/* REQUIREMENT 12/7/24: media query. main part of css is for mobile */
+/* REQUIREMENT 12/7/24: media query for tablet. */
+@media only screen and (min-width: 481px){
+    /***** nav *****/
+    nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    nav a{
+        border-top: 0;
+        padding: 0.8rem 1.2rem;
+        width: fit-content;
+    }
+    #band{
+        margin-bottom: -0.5rem;
+    }
+
+    /***** home *****/
+    #sheep{
+        margin-top: 19rem;
+    }
+    .hero img{
+        max-width: 30rem;
+        width: 75%;
+    }
+    .tour-music section{
+        padding: 2.5rem 3rem;
+    }
+    .item{
+        max-width: 20rem;
+    }
+    article figcaption{
+        padding: 1rem 2rem;
+    }
+    .about{
+        padding: 2.5rem 3rem;
+    }
+
+    /***** music *****/
+    .side-img{
+        max-width: 12rem;
+    }
+
+    /***** tour *****/
+    #roseslong2, #roseslong2-2{
+        max-width: 14rem;
+        width: 34%;
+    }
+    table{
+        font-size: 1.1rem;
+        max-width: 35rem;
+    }
+
+    /***** contact *****/
+    #vine, #vine2{
+        max-width: 14rem;
+    }
+    fieldset{
+        max-width: 30rem;
+        width: 80%;
+    }
+}
+
+/************* desktop *************/
+/* REQUIREMENT 12/7/24: media query for desktop. */
+@media only screen and (min-width: 769px){
+    /***** general *****/
+    .center-main h1{
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+    .center-main h2{
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+    }
+
+    /***** nav *****/
+    nav{
+        align-items: center;
+        /* backdrop-filter: blur(20px);
+        background-color: #181616d7; */
+        display: flex;
+        justify-content: space-between;
+        /* position: fixed;
+        width: 100%; */
+        /* z-index: 1; */
+    }
+    nav a{
+        border-left: 1px solid #403E3F;
+        padding: 1.5rem 2rem;
+    }
+    #band{
+        border-left: 0;
+        font-size: 1.8rem;
+        margin: 0;
+        padding: 0 2rem;
+    }
+
+    /***** home *****/
+    .hero{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 90rem;
+        margin: auto;
+        padding: 2rem 4rem;
+    }
+    .hero img{
+        max-width: 35rem;
+        min-width: 25rem;
+        order: 100;
+        width: 40%;
+    }
+    .hero div{
+        align-items: flex-start;
+        gap: 0.8rem;
+        margin-left: 4%;
+        order: 99;
+    }
+    .hero div h1{
+        font-size: 5.8rem;
+        letter-spacing: 4px;
+        line-height: 5.5rem;
+    }
+    .hero div h2{
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+        margin-left: 0.8rem;
+    }
+    .hero .pri-btn{
+        letter-spacing: 3px;
+        margin-top: 2.5rem;
+        padding: 0.8rem 1.6rem;
+    }
+    #sheep{
+        position: fixed;
+        left: 10%;
+        margin-top: 0;
+        opacity: 40%;
+        transform: scale(1.15);
+    }
+    /* tour/music */
+    #roses, #roses2, #roseslong{
+        display: inline;
+        position: absolute;
+        z-index: -1;
+    }
+    .tour-music{
+        border-bottom: 1px solid #403E3F;
+        border-top: 1px solid #403E3F;
+        flex-direction: row;
+    }
+    #red-img{
+        min-height: 30rem;
+        object-position: 0 15%;
+        width: 33%;
+    }
+    .tour-music section{
+        border-bottom: none;
+        justify-content: space-between;
+        padding: 3.5rem 4rem 6rem;
+        position: relative;
+        width: 33.33%;
+    }
+    #roses, #roses2{
+        bottom: -3rem;
+        max-width: 18rem;
+        right: -2rem;
+        width: 65%;
+    }
+    #roses2{
+        bottom: -2rem;
+        right: -3rem;
+        width: 75%;
+    }
+    .sect-music{
+        border-left: 1px solid #403E3F;
+        overflow: visible;
+    }
+    .song img{
+        min-height: 45px;
+        width: 45px;
+    }
+    .tour-music, .sect-merch, article, aside, footer{
+        background-color: #1816163f;
+        backdrop-filter: blur(10px);
+    }
+    nav, footer{
+        background-color: #181616;
+    }
+    .song a{
+        max-width: 25rem;
+        width: 90%;
+    }
+    /* merch */
+    .sect-merch{
+        padding-bottom:3.54rem;
+    }
+    .merch-heading{
+        font-size: 1.6rem;
+    }
+    .sect-merch div{
+        align-items: center;
+        flex-direction: row;
+        gap: 4rem;
+        margin-top: 1rem;
+        padding: 0 3rem;
+    }
+    .item{
+        max-width: 25rem;
+        width: 33%;
+    }
+    /* about */
+    article{
+        border-top: 1px solid #403E3F;
+        display: flex;
+    }
+    figure{
+        max-width: 40rem;
+        width: 90%;
+    }
+    #fig-img{
+        border: none;
+        min-height: 25rem;
+        object-fit: cover;
+    }
+    .about{
+        border-left: 1px solid #403E3F;
+        border-top: 0;
+        overflow: hidden;
+        padding: 4rem 5rem;
+        position: relative;
+        /* width: 60%; */
+    }
+    #roseslong{
+        max-width: 12rem;
+        right: 4rem;
+        top: -8rem;
+        transform: rotate(-70deg);
+        width: 25%;
+    }
+    .about-heading h3{
+        font-size: 2.2rem;
+    }
+    /* cta */
+    .sub div p{
+        font-size: 1.3rem;
+    }
+    .sub-form{
+        min-width: 30rem;
+        width: 50%;
+    }
+    .sub-form input{
+        padding: 1rem 1.5rem;
+    }
+    aside{
+        overflow: hidden;
+        padding: 6rem 2rem 7rem;
+        position: relative;
+    }
+    aside img{
+        bottom: 1rem;
+        display: inline;
+        max-width: 20rem;
+        position: absolute;
+        width: 50%;
+        z-index: 1;
+    }
+    .sub div, .sub form{
+        z-index: 2;
+    }
+    #side-illust1{
+        left: 0.5rem;
+        transform: scaleX(-1);
+    }
+    #side-illust2{
+        right: 0.5rem;
+    }
+
+    /***** music *****/
+    .side-img{
+        max-width: 16rem;
+        width: 25%;
+    }
+    #albums-eps div{
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: center;
+    }
+    #albums-eps a{
+        width: 40%;
+    }
+    #singles div{
+        gap: 1.8rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #platforms{
+        padding: 5rem 1.5rem 4.5rem;
+    }
+    #platforms h2{
+        letter-spacing: 3px;
+        margin-bottom: 2rem;
+    }
+    #platform-icons{
+        gap: 1.5rem;
+    }
+    #platform-icons a{
+        font-size: 1.2rem;
+    }
+    #mvs{
+        gap: 3rem
+    }
+    #mvs h2{
+        font-size: 2rem;
+        letter-spacing: 3px;
+        margin-bottom: -1rem;
+    }
+    #mvs h3{
+        font-size: 1.5rem;
+    }
+    #mvs video{
+        max-width: 45rem;
+    }
+    .vid{
+        gap: 0.5rem;
+    }
+    #mvs div div{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: 40rem;
+    }
+    #yt-cta{
+        gap: 1.8rem;
+        padding: 5rem 1.5rem 3rem;
+    }
+    #profile{
+        gap: 2rem;
+        max-width: 35rem;
+        padding: 1.8rem;
+        width: 35rem;
+    }
+    #profile div{
+        gap: 1rem;
+    }
+    #pfp{
+        width: 6rem;
+    }
+    #profile div img{
+        max-width: 100%;
+        width: 100%;
+    }
+    #profile h3{
+        font-size: 1.4rem;
+    }
+
+    /***** tour *****/
+    #roseslong2, #roseslong2-2{
+        max-width: 22rem;
+    }
+    #roseslong2{
+        left: -0.8rem;
+    }
+    #roseslong2-2{
+        right: -0.8rem;
+    }
+    table{
+        max-width: 40rem;
+    }
+    tr{
+        height: 7rem;
+    }
+    .date{
+        gap: 0.2rem;
+        max-width: 6rem;
+        padding: 1rem;
+    }
+    table .sec-btn{
+        padding: 0.8rem 1.2rem;
+    }
+
+    /***** contact *****/
+    #vine, #vine2{
+        max-width: 24rem;
+        width: 35%;
+    }
+    fieldset{
+        gap: 1.5rem;
+        max-width: 35rem;
+    }
+    legend{
+        margin-bottom: 1rem;
+    }
+    label{
+        padding-bottom: 8px;
+    }
+    #contact-btns{
+        gap: 1rem;
+    }
 }

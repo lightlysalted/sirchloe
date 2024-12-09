@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- REQUIREMENT 11/12/24: index, 3 content pages, css -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- REQUIREMENT 11/4/24: viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- REQUIREMENT 11/4/24: description -->
+    <meta name="description" content="Contact form for Sir Chloe.">
+    <!-- REQUIREMENT 11/4/24: keywords -->
+    <meta name="keywords" content="Sir Chloe, indie, music, band, rock music, indie rock">
+    <!-- REQUIREMENT 11/4/24: author -->
+    <meta name="author" content="Kelly Nguyen">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- REQUIREMENT 11/4/24: title -->
+    <title>Contact: Sir Chloe</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" id="band">𝖘𝖎𝖗 𝖈𝖍𝖑𝖔𝖊</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="center-main">
+        <div id="dec-div">
+            <img src="images/vine.svg" alt="" id="vine" class="side-img">
+            <img src="images/vine.svg" alt="" id="vine2" class="side-img">
+        </div>
+        <h1>Contact</h1>
+        <!-- REQUIREMENT 11/28/24: form -->
+        <form method="post" id="contact-form">
+            <!-- REQUIREMENT 11/28/24: fieldset -->
+            <fieldset>
+                <!-- REQUIREMENT 11/28/24: legend -->
+                <legend>Let's Connect</legend>
+                    <div>
+                        <!-- REQUIREMENT 11/28/24: field label -->
+                        <label for="name">Name<span>*</span></label>
+                        <!-- REQUIREMENT 11/28/24: input box 1 of 3 -->
+                        <!-- REQUIREMENT 11/28/24: data type 1 of 2 -->
+                        <!-- REQUIREMENT 11/28/24: maxlength -->
+                        <!-- REQUIREMENT 11/28/24: placeholder -->
+                        <!-- REQUIREMENT 11/28/24: required -->
+                        <input type="text" id="name" name="Name" placeholder="Name" maxlength="15" required>
+                    </div>
+                    <div>
+                        <label for="mail">Email<span>*</span></label>
+                        <!-- REQUIREMENT 11/28/24: input box 2 of 3 -->
+                        <!-- REQUIREMENT 11/28/24: data type 2 of 2 -->
+                        <!-- REQUIREMENT 11/28/24: pattern -->
+                        <input type="email" id="mail" name="Email" placeholder="example@mail.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                    </div>
+                    <div>
+                        <label for="msg">Message<span>*</span></label>
+                        <!-- REQUIREMENT 11/28/24: input box 3 of 3 -->
+                        <textarea name="Message" id="msg" cols="30" rows="5" required></textarea>
+                    </div>
+                    <div id="contact-btns">
+                        <!-- REQUIREMENT 11/28/24: submit and reset buttons -->
+                        <button class="sec-btn" type="reset">Reset</button>
+                        <button class="pri-btn" type="submit">Submit</button>
+                    </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <div>
+            <a href="https://open.spotify.com/artist/6rniTPs9zN26kYnkPdFl1U" target="_blank"><i class="fa-brands fa-spotify fa-xl"></i></a>
+            <a href="https://www.instagram.com/sirchloe/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://www.youtube.com/@sirchloe" target="_blank"><i class="fa-brands fa-youtube fa-xl"></i></a>
+            <a href="https://twitter.com/sirchloe_" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+            <a href="https://www.tiktok.com/@sirchloe" target="_blank"><i class="fa-brands fa-tiktok fa-xl"></i></a>
+        </div>
+        <!-- REQUIREMENT 11/4/24: address -->
+        <address>
+            <p>Email: <a href="mailto:sirchloemusic@gmail.com">sirchloemusic@gmail.com</a></p>
+            <p>Phone: <a href="tel:2032049764">+1 (203) 204-9764</a></p>
+        </address>
+    </footer>
+</body>
+</html>
