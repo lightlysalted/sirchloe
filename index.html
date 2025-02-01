@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- REQUIREMENT 11/12/24: index, 3 content pages, css -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,20 +8,21 @@
     <meta name="description" content="Unofficial website for the band Sir Chloe.">
     <!-- REQUIREMENT 11/4/24: keywords -->
     <meta name="keywords" content="Sir Chloe, indie, music, band, rock music, indie rock">
-    <!-- REQUIREMENT 11/4/24: author -->
-    <meta name="author" content="Kelly Nguyen">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- REQUIREMENT 11/4/24: title -->
-    <title>Home: Sir Chloe</title>
+    <title>Home – Sir Chloe</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <!--<link rel="icon" sizes="any" type="image/svg+xml" href="images/logo.svg">-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     </style>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="desktop-nav">
             <a href="index.html" id="band">𝖘𝖎𝖗 𝖈𝖍𝖑𝖔𝖊</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -31,10 +31,24 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <nav id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="index.html" class="first-link">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <nav id="nav-menu">
+            <a href="index.html" id="band">𝖘𝖎𝖗 𝖈𝖍𝖑𝖔𝖊</a>
+          <span onclick="openNav()">&#9776;</span>
+        </nav>
     </header>
     <main>
-        <!-- <div style="background-color: #262425; padding: 1rem; text-align: center;">
-            <p>Work in progress: site is designed mobile-first</p>
+        <!-- <div id="notice">
+            <p><strong>Note:</strong> forms/inputs are nonfunctional and are for appearances only.</p>
+            <button id="noticeBtn">Got it</button>
         </div> -->
         <div class="hero">
             <!-- REQUIREMENT 11/17/24: image 1 of 5 -->
@@ -126,10 +140,9 @@
             </div>
         </section>
         <article>
-            <!-- REQUIREMENT 11/17/24: figure and figcaption -->
+            <!-- REQUIREMENT 11/17/24: figure -->
             <figure>
                 <img src="images/sirchloe2.png" alt="Dana Foote performing with two other band members in the back." id="fig-img">
-                <figcaption>Dana Foote performing with two other band members in the back.</figcaption>
             </figure>
             <div class="about">
                 <img src="images/roseslong.png" alt="" id="roseslong">
@@ -139,11 +152,7 @@
                     <h3>Sir Chloe</h3>
                 </div>
                 <div class="article-content">
-                    <!-- REQUIREMENT 11/17/24: blockquote -->
-                    <blockquote cite="https://www.bmi.com/news/entry/bmi-indie-spotlight-sir-chloe">"Sir Chloe is the band Dana Foote formed during her senior year at Bennington College in Vermont, where she put on a concert in lieu of a thesis."
-                        <span>Broadcast Music, Inc.</span>
-                    </blockquote>
-                    <p>Their music may also be classified as pop rock, alternative, pop punk, and indie rock.</p>
+                    <p>Sir Chloe is a rock band originating in Vermont. Their music may also be classified as pop rock, alternative, pop punk, and indie rock. In 2017, Dana Foote formed the band during her senior year at Bennington College, where she put on a concert in lieu of a thesis.</p>
                 </div>
             </div>
         </article>
@@ -158,6 +167,7 @@
                         <input type="email" placeholder="Email Address" required>
                         <button type="submit" class="pri-btn">Submit</button>
                 </form>
+                <small class="note">Forms/inputs are nonfunctional and are for appearances only.</small>
             </div>
             <img src="images/goat.svg" alt="" id="side-illust2">
         </aside>
@@ -173,7 +183,6 @@
         <!-- REQUIREMENT 11/4/24: address -->
         <address>
             <p>Email: <a href="mailto:sirchloemusic@gmail.com">sirchloemusic@gmail.com</a></p>
-            <p>Phone: <a href="tel:2032049764">+1 (203) 204-9764</a></p>
         </address>
     </footer>
 </body>

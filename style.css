@@ -37,6 +37,10 @@
 }
 
 /************* general *************/
+*{
+    scrollbar-color: #403E3F #262425;
+    scrollbar-width: thin;
+}
 html, body{
     overflow-x: hidden;
 }
@@ -47,7 +51,7 @@ body{
     font-family: "Jost", sans-serif;
     position: relative;
 }
-p, blockquote{
+p{
     font-size: 1.1rem;
     letter-spacing: 1px;
     line-height: 2.2rem;
@@ -59,17 +63,6 @@ a{
 }
 a:hover{
     color: #D9AAA9;
-}
-blockquote{
-    border-left: 3px #403E3F solid;
-    font-style: italic;
-    margin: 1rem;
-    padding: 0 1rem;
-}
-blockquote span{
-    display: block;
-    font-weight: 600;
-    margin-top: 0.8rem;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: "Philosopher", serif;
@@ -121,6 +114,32 @@ button{
 .center-main h1{
     letter-spacing: 2px;
 }
+::selection{
+    color: #F0EEED;
+    background-color: #B42625;
+}
+/* #notice{
+    color:#A09494;
+    background-color: #262425;
+    padding: 1rem;
+    text-align: center;
+}
+#notice p{
+    line-height: 1.5;
+}
+#noticeBtn{
+    background-color: #A09494;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+#noticeBtn:hover{
+    background-color: #726a6a;
+} */
 
 /************* navigation *************/
 nav{
@@ -141,7 +160,7 @@ nav a{
     padding: 1rem;
     text-decoration: none;
     text-transform: uppercase;
-    width: 50%;
+    width: 75%;
 }
 nav a:hover{
     /* REQUIREMENT 11/12/24: dynamic navigation styling */
@@ -158,6 +177,62 @@ nav a:hover{
     /* REQUIREMENT 11/12/24: dynamic navigation styling */
     background-color: #181616;
     color: #D9AAA9;
+}
+/***** mobile nav *****/
+.desktop-nav{
+    display: none;
+}
+#nav-menu{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+#nav-menu span{
+    color: #A09494;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    transition: all .3s ease;
+}
+#nav-menu span:hover{
+    color: #F0EEED;
+}
+.sidenav{
+    background-color: #181616d7;
+    backdrop-filter: blur(20px);
+    border-left: 1px solid #403E3F;
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 4rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all .5s ease;
+    width: 0;
+    z-index: 3;
+}
+.sidenav .closebtn{
+    border: none;
+    color: #B42625;
+    font-size: 2rem;
+    line-height: 0.5;
+    padding: 1.5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: fit-content;
+}
+.sidenav .closebtn:hover{
+    background-color: transparent;
+    color: #D9AAA9;
+}
+#band{
+    margin: 0;
+    padding: 0 1.2rem;
+    width: fit-content;
+}
+.first-link{
+    border-top: none;
 }
 
 /************* footer *************/
@@ -298,7 +373,7 @@ footer p{
 .song{
     list-style: none;
 }
-.song + .song {
+.song + .song{
     margin-top: 1rem;
 }
 .song a{
@@ -373,17 +448,11 @@ footer p{
     border-bottom: 1px solid #403E3F;
     border-top: 1px solid #403E3F;
 }
-article figcaption{
-    color: #A09494;
-    letter-spacing: 1px;
-    margin: auto;
-    padding: 1rem;
-    text-align: center;
-}
 .about-heading h2{
     color: #EF4646;
     font-style: italic;
     letter-spacing: 2px;
+    margin-top: 1rem;
 }
 .about-heading h3{
     font-size: 2rem;
@@ -450,6 +519,13 @@ aside img{
 }
 .sub-form button:hover{
     transform: none;
+}
+.note{
+    color: #A09494;
+    letter-spacing: 1px;
+    margin-top: -1.5rem;
+    padding: 0 1rem;
+    z-index: 2;
 }
 
 /************* music *************/
@@ -543,6 +619,7 @@ aside img{
     flex-direction: column;
 }
 #mvs video{
+    border: 1px solid #403E3F;
     border-radius: 10px;
     margin-bottom: 0.6rem;
     max-width: 25rem;
@@ -667,15 +744,8 @@ fieldset{
     font-size: 1.1rem;
     gap: 1rem;
     margin: auto;
-    padding-bottom: 1rem;
-    width: 90%;
-}
-legend{
-    color: #D9AAA9;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
     padding: 1rem 0;
-    text-transform: uppercase;
+    width: 90%;
 }
 label{
     color: #A09494;
@@ -735,7 +805,16 @@ input:focus, textarea:focus {
         width: fit-content;
     }
     #band{
+        margin: auto;
         margin-bottom: -0.5rem;
+        padding: 0.8rem 1.2rem;
+        width: fit-content;
+    }
+    .sidenav, #nav-menu{
+        display: none;
+    }
+    .desktop-nav{
+        display: block;
     }
 
     /***** home *****/
@@ -752,11 +831,11 @@ input:focus, textarea:focus {
     .item{
         max-width: 20rem;
     }
-    article figcaption{
-        padding: 1rem 2rem;
-    }
     .about{
         padding: 2.5rem 3rem;
+    }
+    .sub-form{
+        max-width: 35rem;
     }
 
     /***** music *****/
@@ -817,6 +896,9 @@ input:focus, textarea:focus {
         font-size: 1.8rem;
         margin: 0;
         padding: 0 2rem;
+    }
+    .desktop-nav{
+        display: flex;
     }
 
     /***** home *****/
@@ -940,7 +1022,7 @@ input:focus, textarea:focus {
     }
     figure{
         max-width: 40rem;
-        width: 90%;
+        width: 125%;
     }
     #fig-img{
         border: none;
@@ -962,6 +1044,9 @@ input:focus, textarea:focus {
         transform: rotate(-70deg);
         width: 25%;
     }
+    .about-heading h2{
+        margin-top: 0;
+    }
     .about-heading h3{
         font-size: 2.2rem;
     }
@@ -970,6 +1055,7 @@ input:focus, textarea:focus {
         font-size: 1.3rem;
     }
     .sub-form{
+        max-width: none;
         min-width: 30rem;
         width: 50%;
     }

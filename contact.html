@@ -9,20 +9,21 @@
     <meta name="description" content="Contact form for Sir Chloe.">
     <!-- REQUIREMENT 11/4/24: keywords -->
     <meta name="keywords" content="Sir Chloe, indie, music, band, rock music, indie rock">
-    <!-- REQUIREMENT 11/4/24: author -->
-    <meta name="author" content="Kelly Nguyen">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- REQUIREMENT 11/4/24: title -->
-    <title>Contact: Sir Chloe</title>
+    <title>Contact – Sir Chloe</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <!--<link rel="icon" sizes="any" type="image/svg+xml" href="images/logo.svg">-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     </style>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="desktop-nav">
             <a href="index.html" id="band">𝖘𝖎𝖗 𝖈𝖍𝖑𝖔𝖊</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -30,6 +31,19 @@
                 <li><a href="tour.html">Tour</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+        </nav>
+        <nav id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="index.html" class="first-link">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <nav id="nav-menu">
+            <a href="index.html" id="band">𝖘𝖎𝖗 𝖈𝖍𝖑𝖔𝖊</a>
+          <span onclick="openNav()">&#9776;</span>
         </nav>
     </header>
     <main class="center-main">
@@ -42,8 +56,6 @@
         <form method="post" id="contact-form">
             <!-- REQUIREMENT 11/28/24: fieldset -->
             <fieldset>
-                <!-- REQUIREMENT 11/28/24: legend -->
-                <legend>Let's Connect</legend>
                     <div>
                         <!-- REQUIREMENT 11/28/24: field label -->
                         <label for="name">Name<span>*</span></label>
@@ -73,6 +85,7 @@
                     </div>
             </fieldset>
         </form>
+        <small class="note">Forms/inputs are nonfunctional and are for appearances only.</small>
     </main>
     <footer>
         <div>
@@ -85,7 +98,6 @@
         <!-- REQUIREMENT 11/4/24: address -->
         <address>
             <p>Email: <a href="mailto:sirchloemusic@gmail.com">sirchloemusic@gmail.com</a></p>
-            <p>Phone: <a href="tel:2032049764">+1 (203) 204-9764</a></p>
         </address>
     </footer>
 </body>

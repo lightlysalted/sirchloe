@@ -1,4 +1,9 @@
 /* REQUIREMENT 11/17/24: reset styles */
+/*
+  Credit to: Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
 * {
     box-sizing: border-box;
     margin: 0;
